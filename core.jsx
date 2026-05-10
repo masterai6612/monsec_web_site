@@ -31,8 +31,11 @@ const Icon = ({ name, ...p }) => {
    ============================================================ */
 const LogoMark = ({ height = 28 }) => (
   <img src="assets/monsec-logo-trans.png" alt="MonSec"
+       loading="eager"
+       decoding="sync"
        style={{ height, width: "auto", display: "block",
-                filter: "drop-shadow(0 0 0.5px rgba(255,255,255,0.4)) brightness(1.15) contrast(1.05)" }}/>
+                imageRendering: "-webkit-optimize-contrast",
+                filter: "drop-shadow(0 0 0.5px rgba(255,255,255,0.5)) brightness(1.18) contrast(1.1) saturate(1.05)" }}/>
 );
 
 /* ============================================================

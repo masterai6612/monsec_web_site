@@ -8,13 +8,6 @@ const APPROACH = [
   { num: "04", title: "Operate",   body: "Triage cadence, on-call enablement, drift detection. Hand-over plan written from day one.", deliv: ["Runbooks", "On-call training", "Quarterly reviews"] }
 ];
 
-const TEAM = [
-  { initials: "AM", name: "Arvin Monie",     role: "Founder · Principal Security Architect", focus: "AI Security, Cloud, AppSec — 20+ yrs across enterprise & finance" },
-  { initials: "RP", name: "Cloud Sec Lead",  role: "Cloud & Container",                       focus: "AWS, Azure, GCP, EKS/AKS/OpenShift specialist" },
-  { initials: "SK", name: "AppSec Lead",     role: "Application Security",                    focus: "SAST/DAST programs, secure code review, OSCP" },
-  { initials: "DV", name: "DevSecOps Lead",  role: "Pipelines & Supply Chain",                focus: "GitHub Actions, GitLab, Jenkins, SLSA L3" }
-];
-
 /* ============================================================
    NAV DROPDOWN
    ============================================================ */
@@ -152,10 +145,6 @@ const App = () => {
               </div>
               <div className="hero__meta">
                 <div className="hero__meta-item">
-                  <div className="num">150<span>+</span></div>
-                  <div className="lbl">Engagements delivered</div>
-                </div>
-                <div className="hero__meta-item">
                   <div className="num">7</div>
                   <div className="lbl">Practice areas</div>
                 </div>
@@ -242,11 +231,12 @@ const App = () => {
             <span className="eyebrow">Team / 03</span>
             <div>
               <h2 className="section__title">
-                Hands-on practitioners, <em>not consultants.</em>
+                Domain experts, <em>matched to engagement.</em>
               </h2>
               <p className="section__lede">
-                A small team of senior security engineers led by Arvin Monie — focused on
-                AI security, AppSec, and cloud. We pick up the keyboard.
+                MonSec is a senior practitioner team with deep expertise across each
+                of our seven practice areas. Engagements are staffed against client
+                requirements, scope, and regulatory context.
               </p>
             </div>
           </div>
@@ -283,22 +273,34 @@ const App = () => {
               </a>
             </div>
             <div>
-              <div style={{fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.1em", color: "var(--ink-faint)", textTransform: "uppercase", marginBottom: 16}}>
-                The team — like-minded security professionals
-              </div>
-              <div className="team">
-                {TEAM.map(m => (
-                  <div key={m.name} className="team__member">
-                    <div className="team__avatar">{m.initials}</div>
-                    <div className="team__name">{m.name}</div>
-                    <div className="team__role">{m.role}</div>
-                    <div className="team__focus">{m.focus}</div>
+              <div className="team-summary__eyebrow">Practice expertise</div>
+              <p className="team-summary__lede">
+                Our consultants are credentialed senior engineers and architects, each
+                specialised in their domain. Every engagement is led by a practice owner
+                accountable for scope, delivery, and outcomes.
+              </p>
+              <div className="team-summary__grid">
+                {[
+                  { name: "AI & LLM Security",      ref: "Practice / 01" },
+                  { name: "Application Security",   ref: "Practice / 02" },
+                  { name: "DevSecOps & SDLC",       ref: "Practice / 03" },
+                  { name: "Cloud Security",         ref: "Practice / 04" },
+                  { name: "Container & Kubernetes", ref: "Practice / 05" },
+                  { name: "Security Architecture",  ref: "Practice / 06" },
+                  { name: "GRC & Compliance",       ref: "Practice / 07" }
+                ].map(p => (
+                  <div key={p.name} className="team-summary__cell">
+                    <div className="team-summary__ref">{p.ref}</div>
+                    <div className="team-summary__name">{p.name}</div>
                   </div>
                 ))}
               </div>
-              <div style={{marginTop: 24, padding: 20, border: "1px dashed var(--line-2)", borderRadius: 10, color: "var(--ink-dim)", fontSize: 13, lineHeight: 1.6}}>
-                <span style={{color: "var(--accent)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.1em"}}>// HIRING</span><br/>
-                Senior practitioners across AI Sec, AppSec, and Cloud — get in touch if you'd like to work with us.
+              <div className="team-summary__note">
+                <span className="team-summary__note-tag">// ENGAGEMENT MODEL</span>
+                MonSec assembles a tailored team for each client based on technical
+                scope, industry, and compliance posture. Sub-contracted specialists
+                may be engaged under MonSec's confidentiality and quality controls
+                where deep niche expertise is required.
               </div>
             </div>
           </div>
