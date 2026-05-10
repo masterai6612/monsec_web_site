@@ -325,9 +325,6 @@ const App = () => {
               <Icon name="linkedin"/> Reach out on LinkedIn
             </a>
           </div>
-          <div style={{marginTop: 40, fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-faint)", letterSpacing: "0.1em"}}>
-            <span className="kbd">↵</span> Toronto, Canada · Remote engagements worldwide
-          </div>
         </div>
       </section>
 
