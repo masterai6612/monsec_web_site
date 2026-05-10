@@ -4,12 +4,12 @@ const { useState, useEffect, useRef } = React;
 const APPROACH = [
   { num: "01", title: "Discover",  body: "Crown-jewel mapping, threat-model workshops, current-state assessment against the relevant control set.", deliv: ["Asset & data-flow inventory", "Threat-model artifacts", "Gap analysis"] },
   { num: "02", title: "Design",    body: "Reference architectures and policy-as-code that fits your stack. No 100-page Word docs nobody reads.", deliv: ["Target architecture", "Policy-as-code repo", "Roadmap & RACI"] },
-  { num: "03", title: "Implement", body: "We embed with your engineers — pipelines, scanners, runtime defense, evidence collection wired in.", deliv: ["Hardened pipelines", "Scanner integrations", "Audit-ready evidence"] },
+  { num: "03", title: "Implement", body: "We embed with your engineers â pipelines, scanners, runtime defense, evidence collection wired in.", deliv: ["Hardened pipelines", "Scanner integrations", "Audit-ready evidence"] },
   { num: "04", title: "Operate",   body: "Triage cadence, on-call enablement, drift detection. Hand-over plan written from day one.", deliv: ["Runbooks", "On-call training", "Quarterly reviews"] }
 ];
 
 const TEAM = [
-  { initials: "AM", name: "Arvin Monie",     role: "Founder · Principal Security Architect", focus: "AI Security, Cloud, AppSec — 20+ yrs across enterprise & finance" },
+  { initials: "AM", name: "Arvin Monie",     role: "Founder Â· Principal Security Architect", focus: "AI Security, Cloud, AppSec â 20+ yrs across enterprise & finance" },
   { initials: "RP", name: "Cloud Sec Lead",  role: "Cloud & Container",                       focus: "AWS, Azure, GCP, EKS/AKS/OpenShift specialist" },
   { initials: "SK", name: "AppSec Lead",     role: "Application Security",                    focus: "SAST/DAST programs, secure code review, OSCP" },
   { initials: "DV", name: "DevSecOps Lead",  role: "Pipelines & Supply Chain",                focus: "GitHub Actions, GitLab, Jenkins, SLSA L3" }
@@ -105,12 +105,12 @@ const App = () => {
               ))}
               <div className="nav__dd-foot">
                 <span>7 practice areas</span>
-                <a href="#services" style={{color: "var(--accent)"}}>View all →</a>
+                <a href="#services" style={{color: "var(--accent)"}}>View all â</a>
               </div>
             </NavDropdown>
             <NavDropdown num="02" label="Approach">
               {APPROACH.map(a => (
-                <DDItem key={a.num} num={a.num} name={a.title} sub={a.body.slice(0, 70) + "…"}
+                <DDItem key={a.num} num={a.num} name={a.title} sub={a.body.slice(0, 70) + "â¦"}
                         href={"#approach"}/>
               ))}
             </NavDropdown>
@@ -120,11 +120,11 @@ const App = () => {
               <DDItem icon="linkedin" name="LinkedIn" sub="Connect with Arvin" href="https://www.linkedin.com/in/arvin-monie-495a1644/"/>
             </NavDropdown>
             <NavDropdown num="04" label="Contact">
-              <DDItem icon="mail" name="info@monsec.ca" sub="Direct line — replies same business day" href="mailto:info@monsec.ca"/>
+              <DDItem icon="mail" name="info@monsec.ca" sub="Direct line â replies same business day" href="mailto:info@monsec.ca"/>
               <DDItem icon="linkedin" name="LinkedIn DM" sub="Reach Arvin on LinkedIn" href="https://www.linkedin.com/in/arvin-monie-495a1644/"/>
-              <DDItem icon="play" name="Book a scoping call" sub="30-min free, no SOW required" href="#contact"/>
+              <DDItem icon="play" name="Book a scoping call" sub="30-min free, no SOW required" href="#" onClick={(e) => { e.preventDefault(); if (window.ReapdatWidget) window.ReapdatWidget.open(); }}/>
             </NavDropdown>
-            <a href="#contact" className="nav__cta">Book a session</a>
+            <a href="#" className="nav__cta" onClick={(e) => { e.preventDefault(); if (window.ReapdatWidget) window.ReapdatWidget.open(); }}>Book a session</a>
           </div>
         </div>
       </nav>
@@ -137,7 +137,7 @@ const App = () => {
           <div className="hero__grid">
             <div>
               <span className="hero__status">
-                <span className="dot"/>v.2026.05 — accepting new engagements
+                <span className="dot"/>v.2026.05 â accepting new engagements
               </span>
               <h1 className="hero__title">
                 Security for the <em>AI-native</em><br/>
@@ -146,7 +146,7 @@ const App = () => {
               <p className="hero__lede">
                 MonSec is a specialist consultancy for AI &amp; LLM security, application security,
                 DevSecOps, and cloud. We embed with your engineers, harden the systems
-                that matter, and leave your team running the controls — not us.
+                that matter, and leave your team running the controls â not us.
               </p>
               <div className="hero__ctas">
                 <a href="#services" className="btn-primary">Explore services <Icon name="arrow"/></a>
@@ -184,7 +184,7 @@ const App = () => {
                 Seven practice areas. <em>Click any to drop into the deep-dive.</em>
               </h2>
               <p className="section__lede">
-                Each area opens an interactive workspace — architecture diagram, live demos,
+                Each area opens an interactive workspace â architecture diagram, live demos,
                 tooling stack, control mappings. Same view your engineers will work from.
               </p>
             </div>
@@ -193,7 +193,7 @@ const App = () => {
           <div className="services-grid">
             {SERVICES.map(s => (
               <button key={s.id} className="service-card" data-span={s.span} onClick={() => setActive(s)}>
-                <div className="service-card__num">{s.num} / {s.tags.join(" · ")}</div>
+                <div className="service-card__num">{s.num} / {s.tags.join(" Â· ")}</div>
                 <div className="service-card__icon"><Icon name={s.icon}/></div>
                 <h3 className="service-card__title">{s.title}</h3>
                 <p className="service-card__sub">{s.sub}</p>
@@ -247,7 +247,7 @@ const App = () => {
                 Hands-on practitioners, <em>not consultants.</em>
               </h2>
               <p className="section__lede">
-                A small team of senior security engineers led by Arvin Monie — focused on
+                A small team of senior security engineers led by Arvin Monie â focused on
                 AI security, AppSec, and cloud. We pick up the keyboard.
               </p>
             </div>
@@ -258,16 +258,16 @@ const App = () => {
                 <img src="assets/arvin.jpeg" alt="Arvin Monie"/>
               </div>
               <h3 className="about__name">Arvin Monie</h3>
-              <div className="about__role">Founder · Principal Security Architect</div>
+              <div className="about__role">Founder Â· Principal Security Architect</div>
               <p className="about__bio">
                 Twenty-plus years across application security, cloud, and AI. I've led security
-                programs at enterprises and high-velocity engineering orgs — embedding scanners
+                programs at enterprises and high-velocity engineering orgs â embedding scanners
                 in pipelines, hardening AWS/Azure/GCP estates, and most recently building
                 guardrails for LLM and agentic systems.
               </p>
               <p className="about__bio" style={{marginTop: 12}}>
                 MonSec exists because the gap between "secure SDLC slides" and "actually
-                shipping safe AI" is wider than ever — and bridging it needs engineers
+                shipping safe AI" is wider than ever â and bridging it needs engineers
                 who can read your codebase, not just your control framework.
               </p>
               <div className="about__creds">
@@ -286,7 +286,7 @@ const App = () => {
             </div>
             <div>
               <div style={{fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.1em", color: "var(--ink-faint)", textTransform: "uppercase", marginBottom: 16}}>
-                The team — like-minded security professionals
+                The team â like-minded security professionals
               </div>
               <div className="team">
                 {TEAM.map(m => (
@@ -300,7 +300,7 @@ const App = () => {
               </div>
               <div style={{marginTop: 24, padding: 20, border: "1px dashed var(--line-2)", borderRadius: 10, color: "var(--ink-dim)", fontSize: 13, lineHeight: 1.6}}>
                 <span style={{color: "var(--accent)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.1em"}}>// HIRING</span><br/>
-                Senior practitioners across AI Sec, AppSec, and Cloud — get in touch if you'd like to work with us.
+                Senior practitioners across AI Sec, AppSec, and Cloud â get in touch if you'd like to work with us.
               </div>
             </div>
           </div>
@@ -315,7 +315,7 @@ const App = () => {
             Bring us your <em>hardest</em> security problem.
           </h2>
           <p className="cta__lede">
-            Free 30-minute scoping call. We'll tell you whether we're the right fit, and what we'd actually do — not a generic statement of work.
+            Free 30-minute scoping call. We'll tell you whether we're the right fit, and what we'd actually do â not a generic statement of work.
           </p>
           <div className="cta__row">
             <a href="mailto:info@monsec.ca" className="btn-primary">
@@ -326,7 +326,7 @@ const App = () => {
             </a>
           </div>
           <div style={{marginTop: 40, fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-faint)", letterSpacing: "0.1em"}}>
-            <span className="kbd">↵</span> Toronto, Canada · Remote engagements worldwide
+            <span className="kbd">âµ</span> Toronto, Canada Â· Remote engagements worldwide
           </div>
         </div>
       </section>
@@ -371,7 +371,7 @@ const App = () => {
             </div>
           </div>
           <div className="footer__bottom">
-            <span>© 2026 MonSec. All rights reserved.</span>
+            <span>Â© 2026 MonSec. All rights reserved.</span>
             <span>// Tailored cybersecurity services for your business needs.</span>
           </div>
         </div>
