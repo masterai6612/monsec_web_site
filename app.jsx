@@ -113,7 +113,7 @@ const App = () => {
               <DDItem icon="linkedin" name="LinkedIn" sub="Connect with Arvin" href="https://www.linkedin.com/in/arvin-monie-495a1644/"/>
             </NavDropdown>
             <NavDropdown num="04" label="Contact">
-              <DDItem icon="mail" name="info@monsec.ca" sub="Direct line — replies same business day" href="mailto:info@monsec.ca"/>
+              <DDItem icon="mail" name="support@monsec.ca" sub="Direct line — replies same business day" href="mailto:support@monsec.ca"/>
               <DDItem icon="linkedin" name="LinkedIn DM" sub="Reach Arvin on LinkedIn" href="https://www.linkedin.com/in/arvin-monie-495a1644/"/>
             </NavDropdown>
           </div>
@@ -318,8 +318,8 @@ const App = () => {
             Free 30-minute scoping call. We'll tell you whether we're the right fit, and what we'd actually do — not a generic statement of work.
           </p>
           <div className="cta__row">
-            <a href="mailto:info@monsec.ca" className="btn-primary">
-              <Icon name="mail"/> info@monsec.ca
+            <a href="mailto:support@monsec.ca" className="btn-primary">
+              <Icon name="mail"/> support@monsec.ca
             </a>
             <a href="https://www.linkedin.com/in/arvin-monie-495a1644/" target="_blank" rel="noreferrer" className="btn-ghost">
               <Icon name="linkedin"/> Reach out on LinkedIn
@@ -362,7 +362,7 @@ const App = () => {
             <div>
               <h4 className="footer__h">Reach</h4>
               <div className="footer__links">
-                <a href="mailto:info@monsec.ca">info@monsec.ca</a>
+                <a href="mailto:support@monsec.ca">support@monsec.ca</a>
                 <a href="https://www.linkedin.com/in/arvin-monie-495a1644/" target="_blank" rel="noreferrer">LinkedIn</a>
               </div>
             </div>
